@@ -79,7 +79,7 @@
 (require 'compile)
 (require 'easymenu)
 
-(defconst rpm-spec-mode-version "0.16" "Version of `rpm-spec-mode'.")
+(defconst rpm-spec-mode-version "0.17" "Version of `rpm-spec-mode'.")
 
 (eval-and-compile (defvar running-xemacs nil))
 
@@ -1473,7 +1473,7 @@ if one is present in the file."
   (message
    (concat "rpm-spec-mode version "
            rpm-spec-mode-version
-           " by Stig Bjørlykke, <stig@bjorlykke.org>")))
+           " by Stig Bjørlykke <stig@bjorlykke.org> and Pierre Rouleau <prouleau001@gmail.com>")))
 
 ;;;###autoload(add-to-list 'auto-mode-alist '("\\.spec\\(\\.in\\)?$" . rpm-spec-mode))
 
