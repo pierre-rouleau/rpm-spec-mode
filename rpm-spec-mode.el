@@ -723,7 +723,12 @@ with no args, if that value is non-nil."
   ;;Initialize font lock for GNU emacs.
   (make-local-variable 'font-lock-defaults)
   (setq font-lock-defaults '(rpm-spec-font-lock-keywords nil t))
-  (run-hooks 'rpm-spec-mode-hook))
+  (run-hooks 'rpm-spec-mode-hook)
+
+  ;; For some reason in Emacs 30, font-lock-mode variable is not set
+  ;; and the buffer is not fontified.  Set the variable and fontify it.
+  (setq font-lock-mode t)
+  (font-lock-ensure))
 
 (defun rpm-command-filter (process string)
   "Filter to process normal output."
