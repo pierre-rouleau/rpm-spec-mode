@@ -398,6 +398,7 @@ value returned by function `user-mail-address'."
     ("Icon")
     ("Provides")
     ("Requires")
+    ("Requires(pre)")
     ("Recommends")
     ("Suggests")
     ("Supplements")
